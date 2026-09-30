@@ -15,11 +15,17 @@
 <style>
   :root {
     --global-theme-color: #d32f2f !important; /* Replaces the purple with red */
+    --global-bg-color: #F5F5F5 !important; /* Matches the background of the profile photo */
   }
   html[data-theme="dark"] {
     --global-theme-color: #ff5252 !important;
   }
   
+  /* Remove shadow from profile image */
+  .profile img {
+    box-shadow: none !important;
+  }
+
   /* Center the navbar links globally without breaking to a new line */
   .navbar-nav {
     margin-left: auto !important;

@@ -3,7 +3,7 @@ layout: about
 title: About
 nav: false
 permalink: /
-subtitle: Researcher at CEA LIST & Université Paris-Saclay
+subtitle: AGI/AI Safety Researcher
 
 profile:
   align: left

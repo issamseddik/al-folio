@@ -30,9 +30,9 @@ news: true
     opacity: 0.8;
   }
   ul {
-    padding-left: 1.5rem !important;
-    margin-left: 1rem !important;
-    list-style-position: outside; /* ensures bullets and text are aligned */
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    list-style-position: inside; /* Puts the bullets in line with the text */
   }
   li {
     margin-bottom: 0.5rem; /* Adds nice vertical space between items */

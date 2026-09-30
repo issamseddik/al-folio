@@ -11,3 +11,23 @@
     </div>
   </footer>
 {% endif %}
+
+<style>
+  :root {
+    --global-theme-color: #d32f2f !important; /* Replaces the purple with red */
+  }
+  html[data-theme="dark"] {
+    --global-theme-color: #ff5252 !important;
+  }
+  
+  /* Center the navbar links globally */
+  #navbarNav {
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+  }
+  .navbar-nav {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+</style>

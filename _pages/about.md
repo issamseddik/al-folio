@@ -1,7 +1,7 @@
 ---
 layout: about
-title: me
-nav: true
+title: About
+nav: false
 permalink: /
 subtitle: Researcher at CEA LIST & Université Paris-Saclay
 

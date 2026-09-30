@@ -14,7 +14,8 @@ profile:
     <p>Université Paris-Saclay</p>
     <p>Palaiseau, France</p>
 
-news: true
+announcements:
+  enabled: true
 ---
 
 <style>

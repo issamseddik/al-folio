@@ -38,6 +38,9 @@ announcements:
   li {
     margin-bottom: 0.5rem; /* Adds nice vertical space between items */
   }
+  .news table th, .news table td {
+    padding-left: 0 !important; /* Forces the news table to perfectly align left with the lists above */
+  }
 </style>
 
 I am a researcher specializing in **Machine Learning**, **Cybersecurity**, and **Large Language Models (LLMs)** at CEA LIST and Université Paris-Saclay. 

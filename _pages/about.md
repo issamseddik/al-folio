@@ -14,10 +14,7 @@ profile:
     <p>Université Paris-Saclay</p>
     <p>Palaiseau, France</p>
 
-selected_papers: false # Disable here, I'll add them manually in the blocks or keep them if he didn't ask to remove. 
-# Wait, the user didn't ask to remove selected papers, but they didn't ask to keep them on the about page either. 
-# I will keep the selected papers on the page since it's standard for an academic page.
-# Actually, I'll set it to false and just put the text, or set it to true.
+news: true
 ---
 
 I am a researcher specializing in **Machine Learning**, **Cybersecurity**, and **Large Language Models (LLMs)** at CEA LIST and Université Paris-Saclay. 
@@ -28,5 +25,3 @@ My current work primarily explores the vulnerabilities of AI systems, specifical
 - **Security of Large Language Models**
 - **Backdoor Attacks and Defenses in Deep Learning**
 - **Community and Collaborative Training Security**
-
-*(Note: If you'd like to update this bio to exactly match your LinkedIn, please paste the text here, as LinkedIn prevents automated bots from reading profiles!)*

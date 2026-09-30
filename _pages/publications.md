@@ -9,7 +9,7 @@ nav_order: 2
 <style>
   .post-header { display: none; }
   /* Remove the top border only for the very first year group */
-  .publications h2.year:first-of-type {
+  .publications h2.bibliography:first-of-type {
     border-top: none !important;
     margin-top: 0 !important;
   }

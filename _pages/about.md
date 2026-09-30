@@ -29,6 +29,12 @@ news: true
     color: var(--global-text-color);
     opacity: 0.8;
   }
+  ul {
+    padding-left: 2rem; /* Indents the bullet points properly */
+  }
+  li {
+    margin-bottom: 0.5rem; /* Adds nice vertical space between items */
+  }
 </style>
 
 I am a researcher specializing in **Machine Learning**, **Cybersecurity**, and **Large Language Models (LLMs)** at CEA LIST and Université Paris-Saclay. 

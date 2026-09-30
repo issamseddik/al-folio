@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <span class="cultural-subtitle">Scientist | Researcher | Innovator</span>
+subtitle: 
 profile:
   align: right
   image: prof_pic.jpg
@@ -11,9 +11,8 @@ profile:
     <p class="contact-info">📍 Lab 404, Science Block</p>
     <p class="contact-info">📧 issam.seddik@example.com</p>
 
-# We disable default sections so we can reorder them creatively below!
 selected_papers: false
-social: true
+social: false
 announcements:
   enabled: false
 latest_posts:
@@ -21,202 +20,213 @@ latest_posts:
 ---
 
 <style>
-/* Custom Cultural & Scientific Theme */
-:root {
-  --primary-cultural: #047857; /* Emerald Green */
-  --secondary-cultural: #b45309; /* Golden Amber */
-  --scientific-blue: #1d4ed8;
-  --bg-timeline: rgba(4, 120, 87, 0.05);
+/* Reset container constraints if necessary to allow full width */
+.post {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.cultural-subtitle {
+/* Hide the default page header to make room for full blocks */
+.post-header {
+  display: none !important;
+}
+
+/* Horizontal Scroll Container */
+.swipe-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  height: 80vh; /* Adjust height as needed */
+  margin-left: calc(-50vw + 50%); /* Break out of jekyll container */
+  margin-right: calc(-50vw + 50%);
+  scrollbar-width: none; /* Firefox */
+}
+
+.swipe-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Blocks */
+.swipe-block {
+  scroll-snap-align: center;
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Styling the Blocks with Culture/Science colors */
+.block-about { background-color: #f8fafc; color: #0f172a; }
+.block-publications { background-color: #047857; color: #ffffff; }
+.block-talks { background-color: #fef3c7; color: #92400e; }
+.block-collaborators { background-color: #1d4ed8; color: #ffffff; }
+.block-blogs { background-color: #f1f5f9; color: #0f172a; }
+.block-contacts { background-color: #0f172a; color: #f8fafc; }
+
+html[data-theme='dark'] .block-about { background-color: #0f172a; color: #f8fafc; }
+html[data-theme='dark'] .block-talks { background-color: #451a03; color: #fef3c7; }
+html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc; }
+
+.block-title {
   font-family: 'Georgia', serif;
-  color: var(--secondary-cultural);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-
-.contact-info {
-  font-family: monospace;
-  color: var(--scientific-blue);
-  margin-bottom: 0.2rem;
-}
-
-/* Timeline Container */
-.scientific-timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem 0;
-}
-
-/* The vertical line */
-.scientific-timeline::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: var(--primary-cultural);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-  border-radius: 2px;
-}
-
-/* Container around each step */
-.timeline-step {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* Left/Right alignments */
-.timeline-step.left { left: 0; }
-.timeline-step.right { left: 50%; }
-
-/* The Hexagon Node (Scientific + Geometric Culture) */
-.timeline-step::after {
-  content: '⬡'; /* Hexagon symbol */
-  font-size: 24px;
-  color: var(--secondary-cultural);
-  position: absolute;
-  top: 15px;
-  right: -13px;
-  background-color: white;
-  line-height: 24px;
-  z-index: 1;
-}
-.timeline-step.right::after { left: -11px; }
-
-/* Content Box */
-.timeline-content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 8px;
-  border-left: 4px solid var(--scientific-blue);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-html[data-theme='dark'] .timeline-content {
-  background-color: #1e1e1e;
-  border-left: 4px solid var(--secondary-cultural);
-  box-shadow: 0 4px 15px rgba(255,255,255,0.05);
-}
-
-html[data-theme='dark'] .timeline-step::after {
-  background-color: #1e1e1e;
-}
-
-.timeline-content:hover {
-  transform: translateY(-5px);
-  border-left-color: var(--primary-cultural);
-}
-
-.timeline-content h3 {
-  margin-top: 0;
-  color: var(--primary-cultural);
-  font-size: 1.2rem;
-}
-
-.timeline-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.timeline-date {
-  font-family: monospace;
-  color: var(--secondary-cultural);
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Reordering titles */
-.section-title {
-  text-align: center;
-  font-family: 'Georgia', serif;
-  color: var(--primary-cultural);
-  margin-top: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  border-bottom: 2px dashed var(--secondary-cultural);
-  display: inline-block;
-  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
-.section-wrapper {
+.block-content {
+  max-width: 800px;
+  width: 100%;
   text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Links inside dark blocks */
+.block-publications a, .block-collaborators a, .block-contacts a {
+  color: #fbbf24;
+}
+
+/* Navigation hints */
+.swipe-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #94a3b8;
+  pointer-events: none;
+  animation: pulse 2s infinite;
+  z-index: 10;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Fix text alignment for includes */
+.block-publications .publications, .block-blogs .post-list {
+  text-align: left;
 }
 </style>
 
-<div class="intro-text" style="text-align: justify; font-size: 1.1rem; margin-bottom: 2rem;">
-  Welcome to my digital space. Here, the precision of <strong>science</strong> meets the richness of <strong>culture</strong>. 
-  I believe that research is a continuous journey—a step-by-step evolution of ideas, much like building a complex molecule or weaving a traditional geometric pattern.
-</div>
+<div class="swipe-hint">← Swipe horizontally to explore →</div>
 
-<div class="section-wrapper">
-  <h2 class="section-title">My Scientific Journey</h2>
-</div>
+<div class="swipe-container" id="swipe-container">
 
-<div class="scientific-timeline">
-  
-  <div class="timeline-step left">
-    <div class="timeline-content">
-      <span class="timeline-date">Present</span>
-      <h3>Lead Researcher</h3>
-      <p>Exploring the boundaries of technology and innovation. Currently focused on integrating complex systems with elegant solutions.</p>
+  <!-- BLOCK 1: ABOUT -->
+  <div class="swipe-block block-about">
+    <div class="block-content">
+      <h2 class="block-title">About Me</h2>
+      <img src="{{ 'assets/img/prof_pic.jpg' | relative_url }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem; border: 4px solid #047857;">
+      <h3>Issam Seddik</h3>
+      <p style="font-family: monospace; color: #047857;">Scientist | Researcher | Innovator</p>
+      <p style="margin-top: 1rem; text-align: justify;">
+        Welcome to my digital space. Here, the precision of science meets the richness of culture. I am currently focused on integrating complex systems with elegant solutions, bringing structural geometry into applied sciences.
+      </p>
     </div>
   </div>
 
-  <div class="timeline-step right">
-    <div class="timeline-content">
-      <span class="timeline-date">2023 - 2024</span>
-      <h3>Postdoctoral Fellowship</h3>
-      <p>Conducted advanced experiments combining computational models with cultural heritage preservation algorithms.</p>
+  <!-- BLOCK 2: PUBLICATIONS -->
+  <div class="swipe-block block-publications">
+    <div class="block-content">
+      <h2 class="block-title">Publications</h2>
+      <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+        {% include selected_papers.liquid %}
+      </div>
     </div>
   </div>
 
-  <div class="timeline-step left">
-    <div class="timeline-content">
-      <span class="timeline-date">2019 - 2023</span>
-      <h3>Ph.D. in Applied Sciences</h3>
-      <p>Defended my thesis on the intersection of structured data networks and traditional algorithmic geometries.</p>
+  <!-- BLOCK 3: TALKS -->
+  <div class="swipe-block block-talks">
+    <div class="block-content">
+      <h2 class="block-title">Talks & Presentations</h2>
+      <ul style="list-style-type: none; padding: 0; text-align: left;">
+        <li style="margin-bottom: 15px; border-bottom: 1px dashed #d97706; padding-bottom: 10px;">
+          <strong>International Conference on Applied Geometry (2023)</strong><br>
+          <em>"Bridging the Gap: Cultural Heritage in Computational Models"</em>
+        </li>
+        <li style="margin-bottom: 15px; border-bottom: 1px dashed #d97706; padding-bottom: 10px;">
+          <strong>Tech & Science Summit (2022)</strong><br>
+          <em>"Algorithmic Approaches to Molecule Generation"</em>
+        </li>
+      </ul>
+      <p style="font-style: italic; margin-top: 2rem;">(Swipe right for more...)</p>
     </div>
   </div>
 
-  <div class="timeline-step right">
-    <div class="timeline-content">
-      <span class="timeline-date">2015 - 2019</span>
-      <h3>Foundation & Culture</h3>
-      <p>Built a strong scientific foundation while actively engaging in cultural enrichment programs.</p>
+  <!-- BLOCK 4: COLLABORATORS -->
+  <div class="swipe-block block-collaborators">
+    <div class="block-content">
+      <h2 class="block-title">Collaborators</h2>
+      <p>I have the pleasure of working with brilliant minds across the globe:</p>
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 2rem;">
+        <div style="margin: 10px;">
+          <div style="width: 80px; height: 80px; background: #3b82f6; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍🔬</div>
+          <p>Dr. Smith</p>
+        </div>
+        <div style="margin: 10px;">
+          <div style="width: 80px; height: 80px; background: #10b981; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👩‍🔬</div>
+          <p>Prof. Amina</p>
+        </div>
+        <div style="margin: 10px;">
+          <div style="width: 80px; height: 80px; background: #f59e0b; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍💻</div>
+          <p>Dev. Karim</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 5: BLOGS -->
+  <div class="swipe-block block-blogs">
+    <div class="block-content">
+      <h2 class="block-title">Writings & Blogs</h2>
+      <div style="text-align: left;">
+        {% include latest_posts.liquid %}
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 6: CONTACTS -->
+  <div class="swipe-block block-contacts">
+    <div class="block-content">
+      <h2 class="block-title">Get In Touch</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Let's collaborate and build something unique.</p>
+      
+      <p>📍 Lab 404, Science Block</p>
+      <p>📧 <a href="mailto:issam.seddik@example.com" style="color: #38bdf8;">issam.seddik@example.com</a></p>
+      
+      <div style="margin-top: 3rem; font-size: 2rem;">
+        <a href="#" style="margin: 0 10px; color: white;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="margin: 0 10px; color: white;"><i class="fab fa-linkedin"></i></a>
+        <a href="#" style="margin: 0 10px; color: white;"><i class="fab fa-github"></i></a>
+      </div>
     </div>
   </div>
 
 </div>
 
-<!-- Reordered Dynamic Sections -->
-<div class="section-wrapper">
-  <h2 class="section-title">Selected Publications</h2>
-</div>
-<div style="text-align: left;">
-  {% include selected_papers.liquid %}
-</div>
-
-<div class="section-wrapper">
-  <h2 class="section-title">Latest Announcements</h2>
-</div>
-<div style="text-align: left;">
-  {% include news.liquid limit=true %}
-</div>
-
-<div class="section-wrapper">
-  <h2 class="section-title">Recent Writings</h2>
-</div>
-<div style="text-align: left;">
-  {% include latest_posts.liquid %}
-</div>
+<!-- Small JavaScript to allow mouse-wheel horizontal scrolling -->
+<script>
+  const container = document.getElementById('swipe-container');
+  container.addEventListener('wheel', (evt) => {
+    // Only scroll horizontally if vertical scroll is less dominant
+    if (Math.abs(evt.deltaY) > Math.abs(evt.deltaX)) {
+      evt.preventDefault();
+      container.scrollLeft += evt.deltaY;
+    }
+  });
+</script>

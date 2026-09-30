@@ -1,6 +1,7 @@
 ---
 layout: about
-title: about
+title: me
+nav: true
 permalink: /
 subtitle: 
 profile:
@@ -66,16 +67,16 @@ latest_posts:
 }
 
 /* Styling the Blocks with Culture/Science colors */
-.block-about { background-color: #f8fafc; color: #0f172a; }
-.block-publications { background-color: #047857; color: #ffffff; }
-.block-talks { background-color: #fef3c7; color: #92400e; }
-.block-collaborators { background-color: #1d4ed8; color: #ffffff; }
-.block-blogs { background-color: #f1f5f9; color: #0f172a; }
-.block-contacts { background-color: #0f172a; color: #f8fafc; }
+.block-about { background-color: #ffffff; color: #000000; border: 2px solid #000000; }
+.block-publications { background-color: #000000; color: #ffffff; }
+.block-talks { background-color: #ffffff; color: #ff0000; border: 2px solid #ff0000; }
+.block-collaborators { background-color: #000000; color: #ffffff; }
+.block-blogs { background-color: #ffffff; color: #000000; border: 2px solid #000000; }
+.block-contacts { background-color: #ff0000; color: #ffffff; }
 
-html[data-theme='dark'] .block-about { background-color: #0f172a; color: #f8fafc; }
-html[data-theme='dark'] .block-talks { background-color: #451a03; color: #fef3c7; }
-html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc; }
+html[data-theme='dark'] .block-about { background-color: #000000; color: #ffffff; }
+html[data-theme='dark'] .block-talks { background-color: #000000; color: #ff0000; }
+html[data-theme='dark'] .block-blogs { background-color: #000000; color: #ffffff; }
 
 .block-title {
   font-family: 'Georgia', serif;
@@ -95,7 +96,7 @@ html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc
 
 /* Links inside dark blocks */
 .block-publications a, .block-collaborators a, .block-contacts a {
-  color: #fbbf24;
+  color: #ff0000;
 }
 
 /* Navigation hints */
@@ -131,9 +132,9 @@ html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc
   <div class="swipe-block block-about">
     <div class="block-content">
       <h2 class="block-title">About Me</h2>
-      <img src="{{ 'assets/img/prof_pic.jpg' | relative_url }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem; border: 4px solid #047857;">
+      <img src="{{ 'assets/img/prof_pic.jpg' | relative_url }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem; border: 4px solid #ff0000;">
       <h3>Issam Seddik</h3>
-      <p style="font-family: monospace; color: #047857;">Scientist | Researcher | Innovator</p>
+      <p style="font-family: monospace; color: #ff0000;">Scientist | Researcher | Innovator</p>
       <p style="margin-top: 1rem; text-align: justify;">
         Welcome to my digital space. Here, the precision of science meets the richness of culture. I am currently focused on integrating complex systems with elegant solutions, bringing structural geometry into applied sciences.
       </p>
@@ -155,11 +156,11 @@ html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc
     <div class="block-content">
       <h2 class="block-title">Talks & Presentations</h2>
       <ul style="list-style-type: none; padding: 0; text-align: left;">
-        <li style="margin-bottom: 15px; border-bottom: 1px dashed #d97706; padding-bottom: 10px;">
+        <li style="margin-bottom: 15px; border-bottom: 1px dashed #000000; padding-bottom: 10px;">
           <strong>International Conference on Applied Geometry (2023)</strong><br>
           <em>"Bridging the Gap: Cultural Heritage in Computational Models"</em>
         </li>
-        <li style="margin-bottom: 15px; border-bottom: 1px dashed #d97706; padding-bottom: 10px;">
+        <li style="margin-bottom: 15px; border-bottom: 1px dashed #000000; padding-bottom: 10px;">
           <strong>Tech & Science Summit (2022)</strong><br>
           <em>"Algorithmic Approaches to Molecule Generation"</em>
         </li>
@@ -175,15 +176,15 @@ html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc
       <p>I have the pleasure of working with brilliant minds across the globe:</p>
       <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 2rem;">
         <div style="margin: 10px;">
-          <div style="width: 80px; height: 80px; background: #3b82f6; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍🔬</div>
+          <div style="width: 80px; height: 80px; background: #000000; border: 2px solid #ff0000; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍🔬</div>
           <p>Dr. Smith</p>
         </div>
         <div style="margin: 10px;">
-          <div style="width: 80px; height: 80px; background: #10b981; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👩‍🔬</div>
+          <div style="width: 80px; height: 80px; background: #000000; border: 2px solid #ff0000; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👩‍🔬</div>
           <p>Prof. Amina</p>
         </div>
         <div style="margin: 10px;">
-          <div style="width: 80px; height: 80px; background: #f59e0b; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍💻</div>
+          <div style="width: 80px; height: 80px; background: #000000; border: 2px solid #ff0000; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍💻</div>
           <p>Dev. Karim</p>
         </div>
       </div>
@@ -207,7 +208,7 @@ html[data-theme='dark'] .block-blogs { background-color: #1e293b; color: #f8fafc
       <p style="font-size: 1.2rem; margin-bottom: 2rem;">Let's collaborate and build something unique.</p>
       
       <p>📍 Lab 404, Science Block</p>
-      <p>📧 <a href="mailto:issam.seddik@example.com" style="color: #38bdf8;">issam.seddik@example.com</a></p>
+      <p>📧 <a href="mailto:issam.seddik@example.com" style="color: #000000;">issam.seddik@example.com</a></p>
       
       <div style="margin-top: 3rem; font-size: 2rem;">
         <a href="#" style="margin: 0 10px; color: white;"><i class="fab fa-twitter"></i></a>

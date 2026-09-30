@@ -7,7 +7,7 @@ subtitle: AGI/AI Safety Researcher
 
 profile:
   align: left
-  image: prof_pic.jpg
+  image: new_prof_pic.png
   image_circular: true # ensures the image is a circle
   more_info: >
     <p>CEA LIST</p>

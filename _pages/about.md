@@ -8,7 +8,7 @@ subtitle: AGI/AI Safety Researcher
 profile:
   align: left
   image: new_prof_pic.png
-  image_circular: true # ensures the image is a circle
+  image_circular: false # ensures the image is a square without shadow
   more_info: >
     <p>CEA LIST</p>
     <p>Université Paris-Saclay</p>

@@ -50,7 +50,7 @@ My current work primarily explores the vulnerabilities of AI systems, specifical
 ### Research Interests
 - **Security of Large Language Models**
 - **Backdoor Attacks and Defenses in Deep Learning**
-- **Community and Collaborative Training Security**
+- **Distributed and Collaborative Training Security**
 
 ### News
 <div class="news">

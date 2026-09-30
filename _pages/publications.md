@@ -8,12 +8,11 @@ nav_order: 2
 
 <style>
   .post-header { display: none; }
-  .publications h2.year, 
-  .publications h2, 
-  h2.year {
+  /* Remove the top border only for the very first year group */
+  .publications h2.year:first-of-type {
     border-top: none !important;
+    margin-top: 0 !important;
   }
-  hr { display: none !important; }
 </style>
 
 <!-- _pages/publications.md -->

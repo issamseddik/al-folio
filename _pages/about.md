@@ -15,7 +15,7 @@ profile:
     <p>Palaiseau, France</p>
 
 announcements:
-  enabled: true
+  enabled: false
 ---
 
 <style>
@@ -48,3 +48,8 @@ My current work primarily explores the vulnerabilities of AI systems, specifical
 - **Security of Large Language Models**
 - **Backdoor Attacks and Defenses in Deep Learning**
 - **Community and Collaborative Training Security**
+
+### News
+<div class="news">
+  {% include news.liquid limit=true %}
+</div>
